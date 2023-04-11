@@ -12,7 +12,7 @@
 
 	<footer >
 		<p class="underline">Copyright ZipItCo</p>
-	</footer>
+	</footer> 
 </div>
 
 
