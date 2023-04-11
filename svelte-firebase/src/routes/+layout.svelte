@@ -1,5 +1,5 @@
 <script>
-
+import '../app.css'
 	
 </script>
 
@@ -10,9 +10,6 @@
 		<slot />
 	</main>
 
-	<footer >
-		<p class="underline">Copyright ZipItCo</p>
-	</footer> 
 </div>
 
 

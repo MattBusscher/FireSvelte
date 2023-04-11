@@ -1,14 +1,16 @@
- <script>
-    let count = 0;
+<script>
+	import TaskList from "../../components/TaskList.svelte";
+    export let listName
+</script>
 
-    $:{
-        console.log(count)
-    }
- </script>
-
- <div class="text-white">
-    <h1>{count}</h1>
-    <button on:click={() => {
-        count++
-    }}>add 1</button>
- </div>
+<div class="p-10 h-full">
+	<div class="text-white text-2xl mb-6">Some List</div>
+	<button class="text-xl mb-3 text-white font-bold cursor-pointer hover:underline flex items-start">
+		+ Add List
+	</button>
+	<div class="flex-it h-full">
+		<div class="flex-it flex-row rounded-xl h-full">
+			<TaskList listName="First List"/>
+		</div>
+	</div>
+</div>

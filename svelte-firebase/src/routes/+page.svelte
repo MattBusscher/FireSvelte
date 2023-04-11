@@ -10,7 +10,7 @@
 <section>
 	<h1>
 		<span class="welcome">
-			<h1 class="font-bold">
+			<h1 class="font-bold text-white">
 				Welcome
 			</h1>
 		</span>
