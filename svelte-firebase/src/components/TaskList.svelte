@@ -30,6 +30,8 @@
         <div class="overflow-x-hidden overflow-y-auto with-scrollbar p-2">
             <!-- Task Item -->
             <TaskItem />
+            <TaskItem />
+            <TaskItem />
         </div>
         <button class="underline flex p-2"> + Add Task </button>
     </div>
