@@ -1,6 +1,7 @@
 <script>
     import TaskItem from "./TaskItem.svelte";
     export let listName
+    export let tasks
 </script>
 <div class="flex-it h-full w-80 max-w-sm min-h-full m-2 my-0">
     <div class="bg-slate-400 flex-it rounded-xl max-h-full border-2 border-gray-500">
@@ -28,10 +29,9 @@
             </div>
         </div>
         <div class="overflow-x-hidden overflow-y-auto with-scrollbar p-2">
-            <!-- Task Item -->
-            <TaskItem />
-            <TaskItem />
-            <TaskItem />
+            {#each tasks as task (task.id)}
+            <TaskItem taskDescription={task.text}/>
+            {/each}
         </div>
         <button class="underline flex p-2"> + Add Task </button>
     </div>
