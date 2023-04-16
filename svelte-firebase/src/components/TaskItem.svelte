@@ -1,14 +1,19 @@
 <script>
-	import Editable from "./Editable.svelte";
+	  import Editable from "./Editable.svelte";
 
-    export let taskDescription = "Default Value";
+    export let task;
+    let value = task.text;
+    function upDateTask(event) {
+      
+      alert("update task with value: " + value);
+    }
   </script>
   
   <div class="flex-it border border-solid p-2 rounded-xl bg-slate-500 mb-2 cursor-pointer">
     <div class="flex-it">
-        <Editable>
+        <Editable bind:value on:editCancel={upDateTask}>
       <div class="flex-it flex-row">
-        <div class="flex flex-1">{taskDescription}</div>
+        <div class="flex flex-1">{value}</div>
         <div class="flex items-end hover:text-red-600">
           <svg
             xmlns="http://www.w3.org/2000/svg"

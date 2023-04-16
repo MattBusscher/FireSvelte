@@ -1,11 +1,18 @@
 <script>
+    import { createEventDispatcher } from "svelte";
+    const dispatch = createEventDispatcher();
+    export let value;
     let isEditing = false;
+    
 </script>
 
 {#if isEditing}
     <div class="flex-it">
-        <textarea />
-        <button on:click={()=> isEditing = false} class="flex underline">Close</button>
+        <textarea bind:value />
+        <button on:click={()=> {
+            isEditing = false;
+            dispatch("editCancel");
+            }} class="flex underline">Close</button>
     </div>
 {:else}
 <button on:click={() => isEditing = true}>
